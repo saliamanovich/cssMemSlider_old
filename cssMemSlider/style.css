@@ -1,0 +1,106 @@
+.container {
+    background-color: black;
+}
+#slider { 
+    position: relative;
+	text-align: center;
+    top: 10px;
+}
+
+#slider{ 
+	margin: 0 auto;
+}
+
+#slides article{
+	width: 20%;
+	float: left;
+}
+
+#slides .image{
+	width: 500%;
+	line-height: 0;
+}
+
+#overflow{ 
+	width: 100%;
+	overflow: hidden;
+}
+
+article img{ 
+	width: 80%;
+    height: 80%;
+}
+
+#desktop:checked ~ #slider{ 
+	max-width: 960px; 
+}
+
+label, a{ 
+	cursor: pointer;
+}
+
+.slider input{ 
+	display: none;
+}
+
+
+#switch-one:checked ~ #slides .image{
+	margin-left: 0;
+}
+
+#switch-two:checked ~ #slides .image{
+	margin-left: -100%;
+}
+
+#switch-three:checked ~ #slides .image{
+	margin-left: -200%;
+}
+
+#switch-four:checked ~ #slides .image{
+	margin-left: -300%;
+}
+
+#controls{ 
+	margin: -10% 0 0 0;
+	width: 100%;
+	height: 50px;
+}
+
+#active label{ 
+	border-radius: 10px; 
+	display: inline-block; 
+	width: 15px;
+	height: 15px;
+	background: #bbb;
+}
+
+#active{ 
+	margin: 10% 0 0;
+	text-align: center;
+}
+
+#active label:hover{ 
+	background: #156a8f;
+	
+}
+
+
+#switch-one:checked ~ #active label:nth-child(1),
+#switch-two:checked ~ #active label:nth-child(2),
+#switch-three:checked ~ #active label:nth-child(3),
+#switch-four:checked ~ #active label:nth-child(4){
+	background: #156a8f;
+	border-color: #156a8f !important;
+}
+
+#slides .image{ 
+	transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+}
+
+#controls label:hover{ 
+	opacity: 0.6;
+}
+
+#controls label{ 
+	transition: opacity 0.2s ease-out;
+}
